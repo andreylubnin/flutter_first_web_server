@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
-class CallToAction extends StatelessWidget {
+class CallToActionTabletDesktop extends StatelessWidget {
   final String title;
-  const CallToAction({Key? key, required this.title}) : super(key: key);
+  const CallToActionTabletDesktop({Key? key, required this.title})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
