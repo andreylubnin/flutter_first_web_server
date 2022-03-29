@@ -3,8 +3,10 @@ import 'package:first_web_server/views/about/about_view.dart';
 import 'package:first_web_server/views/episodes/episodes_view.dart';
 import 'package:first_web_server/views/home/home_view.dart';
 import 'package:flutter/material.dart';
+import 'package:first_web_server/extensions/string_extensions.dart';
 
 Route<dynamic> generateRoute(RouteSettings settings) {
+  var routingData = settings.name?.getRoutingData;
   switch (settings.name) {
     case homeRoute:
       return _getPageRoute(HomeView(), settings);
@@ -12,6 +14,9 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       return _getPageRoute(AboutView(), settings);
     case episodesRoute:
       return _getPageRoute(EpisodesView(), settings);
+    case episodeDetailsRoute:
+      var id = int.tryParse(routingData?['id']);
+      return _getPageRoute(EpisodeDetailsView(id: id), settings);
     default:
       return _getPageRoute(HomeView(), settings);
   }
