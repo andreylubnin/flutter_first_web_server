@@ -20,12 +20,12 @@ class NavigationDrawer extends StatelessWidget {
         NavigationDrawerHeader(),
         DrawerItem(
           title: 'Episodes',
-          icon: Icons.videocam,
+          icon: Icon(Icons.videocam),
           navigationPath: episodesRoute,
         ),
         DrawerItem(
           title: 'About',
-          icon: Icons.help,
+          icon: Icon(Icons.help),
           navigationPath: aboutRoute,
         ),
       ]),

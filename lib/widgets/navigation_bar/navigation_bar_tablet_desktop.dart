@@ -1,6 +1,5 @@
 import 'package:first_web_server/routing/route_names.dart';
-import 'package:first_web_server/views/episodes/episode_view.dart';
-import 'package:first_web_server/widgets/navigation_bar/navbar_item.dart';
+import 'package:first_web_server/widgets/navbar_item/navbar_item.dart';
 import 'package:first_web_server/widgets/navigation_bar/navbar_logo.dart';
 import 'package:flutter/material.dart';
 
@@ -19,16 +18,16 @@ class NavigationBarTabletDesktop extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             children: const [
               NavBarItem(
-                title: 'Episodes',
-                navigationPath: episodesRoute,
-              ),
+                  title: 'Episodes',
+                  navigationPath: episodesRoute,
+                  icon: Icon(Icons.videocam)),
               SizedBox(
                 width: 60,
               ),
               NavBarItem(
-                title: 'About',
-                navigationPath: aboutRoute,
-              ),
+                  title: 'About',
+                  navigationPath: aboutRoute,
+                  icon: Icon(Icons.help)),
             ],
           )
         ],
