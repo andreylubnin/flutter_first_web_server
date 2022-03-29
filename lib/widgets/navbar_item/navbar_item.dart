@@ -6,6 +6,7 @@ import 'package:first_web_server/widgets/navbar_item/navbar_item_mobile.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:responsive_builder/responsive_builder.dart';
+import 'package:first_web_server/extensions/hover_extensions.dart';
 
 class NavBarItem extends StatelessWidget {
   final String title;
@@ -34,7 +35,7 @@ class NavBarItem extends StatelessWidget {
         child: ScreenTypeLayout(
           tablet: NavBarItemTabletDesktop(),
           mobile: NavBarItemMobile(),
-        ),
+        ).showCursorOnHover.moveUpOnHover,
       ),
     );
   }

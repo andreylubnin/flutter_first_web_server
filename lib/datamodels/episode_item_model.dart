@@ -9,8 +9,9 @@ class EpisodeItemModel {
     required this.imageUrl,
   });
 
-  EpisodeItemModel.fromJson(Map<String, dynamic> map) :
-    title = map['title'], 
-    duration = map['duration'],
-    imageUrl = map['imageUrl'];
+  EpisodeItemModel.fromJson(Map<String, dynamic> map)
+      : title = map['title'],
+        duration = map['duration'],
+        imageUrl =
+            'https://miro.medium.com/max/1400/1*67ehqt3-8QMT17q5ckPUSQ.jpeg';
 }
